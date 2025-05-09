@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 
 using Syncfusion.Maui.Chat;
+using Syncfusion.Maui.Picker;
 
 namespace ChatMaui.ViewModels
 {
@@ -15,6 +16,8 @@ namespace ChatMaui.ViewModels
         {
             Message = new ObservableCollection<object>();
             CurrentUser = new Author() { Name = "nami", Avatar = "dotnet_bot.png" };
+
+            GenerateMassages();
         }
 
         private void GenerateMassages()
@@ -36,8 +39,12 @@ namespace ChatMaui.ViewModels
             });
             Message.Add(new TextMessage()
             {
-                Author = new Author() { Name = "mohan", Avatar = "dot" },
-                Text = "Hi Guys, Good Morning! I'm very delighted to share with you the news that our team is going to do."
+                Author = new Author() { Name = "mohan", Avatar = "dotnet_bot.png" },
+                Text = "noe I'm very delighted to share with you the news that our team is going to do."
+            }); Message.Add(new DatePickerMessage()
+            {
+                Author = new Author() { Name = "mohan", Avatar = "dotnet_bot.png" },
+                Text = "noe I'm very delighted to share with you the news that our team is going to do."
             });
         }
     }

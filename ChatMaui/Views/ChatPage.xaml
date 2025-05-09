@@ -3,7 +3,12 @@
     x:Class="ChatMaui.Views.ChatPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:ChatMaui.ViewModels"
     xmlns:sysnfusion="clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat"
     Title="ChatPage">
-    <sysnfusion:SfChat />
+    <ContentPage.BindingContext>
+        <local:ChatViewModel />
+    </ContentPage.BindingContext>
+
+    <sysnfusion:SfChat CurrentUser="{Binding CurrentUser}" Messages="{Binding Message}" />
 </ContentPage>
