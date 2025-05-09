@@ -1,5 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
-
+using Syncfusion.Maui.Core.Hosting;
 namespace ChatMaui
 {
     public static class MauiProgram
@@ -9,6 +9,7 @@ namespace ChatMaui
             var builder = MauiApp.CreateBuilder();
             builder
                 .UseMauiApp<App>()
+                .ConfigureSyncfusionCore()
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
@@ -16,7 +17,7 @@ namespace ChatMaui
                 });
 
 #if DEBUG
-    		builder.Logging.AddDebug();
+            builder.Logging.AddDebug();
 #endif
 
             return builder.Build();
