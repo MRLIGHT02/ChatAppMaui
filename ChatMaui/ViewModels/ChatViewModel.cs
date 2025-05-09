@@ -24,6 +24,21 @@ namespace ChatMaui.ViewModels
                 Author = CurrentUser,
                 Text = "Hi Guys, Good Morning! I'm very delighted to share with you the news that our team is going to do."
             });
+            Message.Add(new TextMessage()
+            {
+                Author = CurrentUser,
+                Text = "Hi Guys, Good Morning! I'm very delighted to share with you the news that our team is going to do."
+            });
+            Message.Add(new TextMessage()
+            {
+                Author = CurrentUser,
+                Text = "Hi Guys, Good Morning! I'm very delighted to share with you the news that our team is going to do."
+            });
+            Message.Add(new TextMessage()
+            {
+                Author = new Author() { Name = "mohan", Avatar = "dot" },
+                Text = "Hi Guys, Good Morning! I'm very delighted to share with you the news that our team is going to do."
+            });
         }
     }
 }
