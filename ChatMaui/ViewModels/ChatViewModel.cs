@@ -49,7 +49,7 @@ namespace ChatMaui.ViewModels
                 Text = "noe I'm very delighted to share with you the news that our team is going to do."
             });
 
-            Message.Add(new DatePickerMessage()
+            Message.Add(new TextMessage()
             {
                 Author = SecondUser,
                 Text = "Nice to meet You Dear"
