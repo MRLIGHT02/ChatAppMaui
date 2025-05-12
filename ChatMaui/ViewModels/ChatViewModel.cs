@@ -46,6 +46,12 @@ namespace ChatMaui.ViewModels
                 Author = new Author() { Name = "mohan", Avatar = "dotnet_bot.png" },
                 Text = "noe I'm very delighted to share with you the news that our team is going to do."
             });
+
+            Message.Add(new DatePickerMessage()
+            {
+                Author = CurrentUser,
+                Text = "."
+            });
         }
     }
 }
