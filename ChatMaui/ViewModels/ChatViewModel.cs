@@ -11,11 +11,13 @@ namespace ChatMaui.ViewModels
     {
 
         public Author CurrentUser { get; set; }
+        public Author SecondUser { get; set; }
         public ObservableCollection<object> Message { get; set; }
         public ChatViewModel()
         {
             Message = new ObservableCollection<object>();
             CurrentUser = new Author() { Name = "nami", Avatar = "dotnet_bot.png" };
+            SecondUser = new Author() { Name = "mohan", Avatar = "dotnet_bot.png" };
 
             GenerateMassages();
         }
@@ -29,7 +31,7 @@ namespace ChatMaui.ViewModels
             });
             Message.Add(new TextMessage()
             {
-                Author = CurrentUser,
+                Author = SecondUser,
                 Text = "Hi Guys, Good Morning! I'm very delighted to share with you the news that our team is going to do."
             });
             Message.Add(new TextMessage()
@@ -39,18 +41,18 @@ namespace ChatMaui.ViewModels
             });
             Message.Add(new TextMessage()
             {
-                Author = new Author() { Name = "mohan", Avatar = "dotnet_bot.png" },
+                Author = SecondUser,
                 Text = "noe I'm very delighted to share with you the news that our team is going to do."
             }); Message.Add(new DatePickerMessage()
             {
-                Author = new Author() { Name = "mohan", Avatar = "dotnet_bot.png" },
+                Author = CurrentUser,
                 Text = "noe I'm very delighted to share with you the news that our team is going to do."
             });
 
             Message.Add(new DatePickerMessage()
             {
-                Author = CurrentUser,
-                Text = "."
+                Author = SecondUser,
+                Text = "Nice to meet You Dear"
             });
         }
     }
