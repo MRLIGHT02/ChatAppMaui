@@ -53,6 +53,10 @@ namespace ChatMaui.ViewModels
             {
                 Author = SecondUser,
                 Text = "Nice to meet You Dear"
+            }); Message.Add(new TextMessage()
+            {
+                Author = CurrentUser,
+                Text = "Nice to meet You Dear"
             });
         }
     }
